@@ -56,25 +56,25 @@ def ibuild_keyboard(buttons):
 async def on_plug_in_callback_query_handler(event):
     buttons = [
         (
-            Button.inline(f"Admin ({len(GRP_INFO['admin'])})", data="admin_menu"),
-            Button.inline(f"Bot ({len(GRP_INFO['bot'])})", data="bot_menu"),
+            Button.inline(f"🎼ᴀᴅᴍɪɴꜱ🎼 ({len(GRP_INFO['admin'])})", data="admin_menu"),
+            Button.inline(f"🎼ᴜꜱᴇʀʙᴏᴛ🎼 ({len(GRP_INFO['bot'])})", data="bot_menu"),
         ),
         (
-            Button.inline(f"Fun ({len(GRP_INFO['fun'])})", data="fun_menu"),
-            Button.inline(f"Misc ({len(GRP_INFO['misc'])})", data="misc_menu"),
+            Button.inline(f"🎼ꜰᴜɴ🎼 ({len(GRP_INFO['fun'])})", data="fun_menu"),
+            Button.inline(f"🎼ᴍɪꜱᴄ🎼 ({len(GRP_INFO['misc'])})", data="misc_menu"),
         ),
         (
-            Button.inline(f"Tools ({len(GRP_INFO['tools'])})", data="tools_menu"),
-            Button.inline(f"Utils ({len(GRP_INFO['utils'])})", data="utils_menu"),
+            Button.inline(f"🎼ᴛᴏᴏʟꜱ🎼 ({len(GRP_INFO['tools'])})", data="tools_menu"),
+            Button.inline(f"🎼ᴜᴛɪʟꜱ🎼 ({len(GRP_INFO['utils'])})", data="utils_menu"),
         ),
         (
-            Button.inline(f"Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
-            Button.inline(f"Useless ({len(GRP_INFO['useless'])})", data="useless_menu"),
+            Button.inline(f"🎼ᴇxᴛʀᴀꜱ🎼 ({len(GRP_INFO['extra'])})", data="extra_menu"),
+            Button.inline(f"🎼ᴜꜱᴇ-ʟᴇꜱꜱ🎼 ({len(GRP_INFO['useless'])})", data="useless_menu"),
         ),
-        (Button.inline(f"👨‍💻 Main Menu", data="mainmenu"),),
+        (Button.inline(f"🥀 ʙᴏᴛ ᴍᴀɴᴜ 🥀", data="mainmenu"),),
     ]
     await event.edit(
-        f"💝『{mention}』💝",
+        f"🥀『{mention}』🥀",
         buttons=buttons,
         link_preview=False,
     )
@@ -82,16 +82,16 @@ async def on_plug_in_callback_query_handler(event):
 
 def main_menu():
     tol = gvarstatus("BOT_USERNAME")
-    text = f"⚜ {mention}  ⚜"
+    text = f"🥀 {mention}  🥀"
     buttons = [
-        [custom.Button.inline("👨‍💻 Info 👨‍💻", data="check")],
+        [custom.Button.inline("🥀 ɪɴꜰᴏ 🥀", data="check")],
         [
-            custom.Button.inline("🔰 Plugins 🔰", data="help_k_minu"),
-            Button.url("✨ Assistant ✨", f"https://t.me/{tol}"),
+            custom.Button.inline("🥀 ᴘʟᴜɢɪɴꜱ 🥀", data="help_k_minu"),
+            Button.url("🥀 ᴀꜱꜱɪꜱᴛᴀɴᴛ 🥀", f"https://t.me/{tol}"),
         ],
         [
             custom.Button.inline("⚜ Alive ⚜", data="stats"),
-            Button.url("Support 🇮🇳", "https://t.me/Cyberbot_AI"),
+            Button.url("Support 🇮🇳", "https://t.me/LegendBot_AI"),
         ],
         [custom.Button.inline("❌", data="clise")],
     ]
@@ -122,7 +122,7 @@ def paginate_help(
         number_of_cols = int(gvarstatus("COLUMNS_IN_HELP") or 2)
     except (ValueError, TypeError):
         number_of_cols = 2
-    LOL_EMOJI = gvarstatus("HELP_EMOJI") or "💝"
+    LOL_EMOJI = gvarstatus("HELP_EMOJI") or "🥀"
     lal = [x for x in LOL_EMOJI.split()]
     HELP_EMOJI = random.choice(lal)
     helpable_plugins = [p for p in loaded_plugins if not p.startswith("_")]
@@ -186,13 +186,13 @@ def paginate_help(
                 (
                     Button.inline("⬅️", data=f"{prefix}_prev({modulo_page})_plugin"),
                     Button.inline(
-                        f"{HELP_EMOJI} Back {HELP_EMOJI}", data="help_k_minu"
+                        f"{HELP_EMOJI} ʙᴀᴄᴋ {HELP_EMOJI}", data="help_k_minu"
                     ),
                     Button.inline("➡️", data=f"{prefix}_next({modulo_page})_plugin"),
                 )
             ]
         else:
-            pairs = pairs + [(Button.inline("⬅️ Back", data="help_k_minu"),)]
+            pairs = pairs + [(Button.inline("⬅️ ʙᴀᴄᴋ", data="help_k_minu"),)]
     elif len(pairs) > number_of_rows:
         if category_pgno < 0:
             category_pgno = len(pairs) + category_pgno
@@ -205,7 +205,7 @@ def paginate_help(
                     data=f"{prefix}_prev({modulo_page})_command_{category_plugins}_{category_pgno}",
                 ),
                 Button.inline(
-                    f"{HELP_EMOJI} Back {HELP_EMOJI}",
+                    f"{HELP_EMOJI} ʙᴀᴄᴋ {HELP_EMOJI}",
                     data=f"back_plugin_{category_plugins}_{category_pgno}",
                 ),
                 Button.inline(
@@ -220,7 +220,7 @@ def paginate_help(
         pairs = pairs + [
             (
                 Button.inline(
-                    "⬅️ Back",
+                    "⬅️ ʙᴀᴄᴋ",
                     data=f"back_plugin_{category_plugins}_{category_pgno}",
                 ),
             )
@@ -245,17 +245,17 @@ async def inline_handler(event):  # sourcery no-metrics
         match2 = re.findall(inf, query)
         hid = re.compile("hide (.*)")
         match3 = re.findall(hid, query)
-        if query.startswith("**Cyberbot"):
+        if query.startswith("**₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』"):
             buttons = [
                 (Button.url(f"{ALIVE_NAME}", f"tg://openmessage?user_id={USERID}"),),
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("Repo", "https://github.com/ITS-Cyberbot/Cyberbot"),
+                    Button.url("Repo", "https://github.com/INVISIBLE-CYBER-BUCK/CYBERBUCKUSERBOT"),
                 ),
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
             if ALIVE_PIC is None:
-                I_IMG = "https://telegra.ph/file/f3facc08397bb5728de26.jpg"
+                I_IMG = "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
             else:
                 lol = list(ALIVE_PIC.split())
                 I_IMG = random.choice(lol)
@@ -279,9 +279,9 @@ async def inline_handler(event):  # sourcery no-metrics
                     buttons=buttons,
                 )
             await event.answer([result] if result else None)
-        if query.startswith("**⚜ Cyberbot"):
-            grp_username = gvarstatus("GROUP_USERNAME") or "Cyberbot_OP"
-            chnl_username = gvarstatus("CHANNEL_USERNAME") or "Cyberbot_AI"
+        if query.startswith("**⚜ ₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』"):
+            grp_username = gvarstatus("GROUP_USERNAME") or "Y_RUS_SUPPORT"
+            chnl_username = gvarstatus("CHANNEL_USERNAME") or "Y_RUS_NETWORK"
             buttons = [
                 (Button.url(f"{ALIVE_NAME}", f"tg://openmessage?user_id={USERID}"),),
                 (
@@ -291,7 +291,7 @@ async def inline_handler(event):  # sourcery no-metrics
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
             if ALIVE_PIC is None:
-                IMG = "https://telegra.ph/file/a4a6a40205873ae7f7ceb.jpg"
+                IMG = "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
             else:
                 PIC = list(ALIVE_PIC.split())
                 IMG = random.choice(PIC)
@@ -318,14 +318,14 @@ async def inline_handler(event):  # sourcery no-metrics
         elif query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚜ Legendary Af Cyberbot ⚜**",
+                text=f"**⚜ Legendary Af ₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』 ⚜**",
                 buttons=[
                     [Button.url("♥️ Tutorial ♥", "https://youtu.be/CH_KO1wim2o")],
-                    [Button.url("📍 𝚁𝚎𝚙𝚘 📍", "https://github.com/LEGEND-AI/Cyberbot")],
+                    [Button.url("📍 𝚁𝚎𝚙𝚘 📍", "https://github.com/INVISIBLE-CYBER-BUCK/CYBERBUCKUSERBOT")],
                     [
                         Button.url(
                             "💞 Deploy 💞",
-                            "https://heroku.com/deploy?template=https://github.com/LEGEND-AI/Cyberbot",
+                            "https://heroku.com/deploy?template=https://github.com/ITS-LEGENDX/LEGENDBOT",
                         )
                     ],
                 ],
@@ -509,7 +509,7 @@ async def inline_handler(event):  # sourcery no-metrics
         elif string == "help":
             oso = gvarstatus("HELP_IMG")
             if oso is None:
-                help_pic = "https://telegra.ph/file/144d8ea74fef8ca12253c.jpg"
+                help_pic = "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
             else:
                 lol = [x for x in oso.split()]
                 PIC = list(lol)
@@ -517,8 +517,8 @@ async def inline_handler(event):  # sourcery no-metrics
             _result = main_menu()
             if oso == "OFF":
                 result = builder.article(
-                    title="© Cyberbot Help",
-                    description="Help menu for Cyberbot",
+                    title="© CyberBot Help",
+                    description="Help menu for CyberBot",
                     text=_result[0],
                     buttons=_result[1],
                     link_preview=False,
@@ -534,7 +534,7 @@ async def inline_handler(event):  # sourcery no-metrics
                 result = builder.document(
                     help_pic,
                     text=_result[0],
-                    title="Cyberbot Help Menu",
+                    title="CyberBot Help Menu",
                     buttons=_result[1],
                     link_preview=False,
                 )
@@ -639,7 +639,7 @@ async def inline_handler(event):  # sourcery no-metrics
             ]
             PM_IMG = (
                 gvarstatus("PM_IMG")
-                or "https://telegra.ph/file/69fa26f4659e377dea80e.jpg"
+                or "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
             )
             if PM_IMG == "OFF":
                 LEGEND_IMG = None
@@ -672,28 +672,28 @@ async def inline_handler(event):  # sourcery no-metrics
         else:
             buttons = [
                 (
-                    Button.url("Source code", "https://github.com/LEGEND-AI/Cyberbot"),
+                    Button.url("Source code", "https://github.com/ITS-LEGENDX/LEGENDBOT"),
                     Button.url(
-                        "Deploy",
-                        "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FLEGEND-AI%2FCyberbot&template=https%3A%2F%2Fgithub.com%2FLEGEND-AI%2FCyberbot",
+                        "LegendX",
+                        "https://t.me/ll_ll_LegendHacker_IN_ll_ll",
                     ),
                 )
             ]
-            ALV_PIC = "https://telegra.ph/file/8d79a264916a247fe28d2.jpg"
+            ALV_PIC = "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
             markup = event.client.build_reply_markup(buttons)
             photo = types.InputWebDocument(
                 url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
             )
             text, msg_entities = await event.client._parse_message_text(
-                f"⚜ **Lêɠêɳ̃dẞø†** ⚜\n------------\n🔰 Owner ~ {mention}\n\n👨‍💻 Support ~ {Legend_grp}",
+                f"⚜ **₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』** ⚜\n------------\n🔰 Owner ~ {mention}\n\n👨‍💻 Support ~ {Legend_grp}",
                 "md",
             )
             result = types.InputBotInlineResult(
                 id=str(uuid4()),
                 type="photo",
-                title=f"Lêɠêɳ̃dẞø†",
-                description=f"Lêɠêɳ̃dẞø†\nhttps://t.me/Cyberbot_OP",
-                url="https://github.com/LEGEND-AI/Cyberbot",
+                title=f"₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』",
+                description=f"₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』\nhttps://t.me/invisiblesecuritycyberbuckchat",
+                url="https://github.com/INVISIBLE-CYBER-BUCK/CYBERBUCKUSERBOT",
                 thumb=photo,
                 content=photo,
                 send_message=types.InputBotInlineMessageMediaAuto(
@@ -710,7 +710,7 @@ async def on_plug_in_callback_query_handler(event):
         (Button.inline("Re-Open Menu", data="mainmenu"),),
     ]
     await event.edit(
-        f"📜 Menu Provider Has Been Closed\n\n🔰 Bot Of : {mention}\n\n             [©️Lêɠêɳ̃dẞø†](https://t.me/Cyberbot_OP)",
+        f"📜 Menu Provider Has Been Closed\n\n🔰 Bot Of : {mention}\n\n             [©️₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』](https://t.me/invisiblesecuritycyberbuckchat)",
         buttons=buttons,
         link_preview=False,
     )
