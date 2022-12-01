@@ -50,7 +50,7 @@ async def amireallyalive(event):
     lal = list(EMOJI.split())
     EMOTES = random.choice(lal)
     sweetie_caption = (
-        "**⚜ Cyberbot Is Online ⚜**\n\n" + f"{gvarstatus('ALIVE_TEMPLATE')}"
+        "**⚜ ₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』Is Online ⚜**\n\n" + f"{gvarstatus('ALIVE_TEMPLATE')}"
     )
     caption = sweetie_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
@@ -79,7 +79,7 @@ temp = {ALIVE_TEXT}
 **{EMOTES} Master:** {mention}
 **{EMOTES} Uptime :** `{uptime}`
 **{EMOTES} Telethon Version :** `{telever}`
-**{EMOTES} Legenduserbot Version :** `{legendver}`
+**{EMOTES} ₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』Version :** `{legendver}`
 **{EMOTES} Python Version :** `{pyver}`
 **{EMOTES} Database :** `{dbhealth}`
 """
@@ -103,9 +103,9 @@ async def amireallyalive(event):
     a = gvarstatus("ALIVE_EMOJI") or "✥"
     kiss = list(a.split())
     EMOJI = random.choice(kiss)
-    legend_caption = "**Cyberbot Is Online**\n\n"
+    legend_caption = "**₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』 Is Online**\n\n"
     legend_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
-    legend_caption += f"**{EMOJI} Legenduserbot Version :** `{legendversion}`\n"
+    legend_caption += f"**{EMOJI} ₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』Version :** `{legendversion}`\n"
     legend_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
     legend_caption += f"**{EMOJI} Uptime :** {uptime}\n"
     legend_caption += f"**{EMOJI} Master:** {mention}\n"
@@ -116,19 +116,20 @@ async def amireallyalive(event):
 
 edit_time = 12
 """ =======================CONSTANTS====================== """
-file1 = "https://te.legra.ph/file/2426eab17330c6e6310ea.mp4"
-file2 = "https://te.legra.ph/file/11ec9dd576ee5536125b2.jpg"
-file3 = "https://te.legra.ph/file/d2a5265abdc4e73af1f94.jpg"
-file4 = "https://telegra.ph/file/b6f0c65a337b1f2609d07.jpg"
-file5 = "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
+file1 = "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
+file2 = "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
+file3 = "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
+file4 = "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
+file5 = "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
 """ =======================CONSTANTS====================== """
-pm_caption = f"**Cyberbot Is Up**\n"
+pm_caption = f"**₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』 Is Up**\n"
 pm_caption += f"**╭────────────**\n"
 pm_caption += f"┣»»»『{mention}』«««\n"
-pm_caption += f"┣Lêɠêɳ̃dẞø† ~ {legendversion}\n"
-pm_caption += f"┣Lêɠêɳ̃d  ~ [Owner](https://t.me/Legend_K_Boy)\n"
-pm_caption += f"┣Support ~ [G𝖗ουρ](https://t.me/Cyberbot_OP)\n"
-pm_caption += f"┣Řepô    ~ [Rєρο](https://github.com/LEGEND-AI/Cyberbot)\n"
+pm_caption += f"┣₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽ ~ {legendversion}\n"
+pm_caption += f"┣【𝕀NV𝕀🆂𝕀BLE】 ~ [Owner](https://t.me/M_r_invisible_official)\n"
+pm_caption += f"┣【≋ʟᴇɢᴇɴ͢͢͢ᴅx≋】 ~ [Owner](https://t.me/ll_ll_LegendHacker_IN_ll_ll)\n"
+pm_caption += f"┣Support ~ [G𝖗ουρ](https://t.me/invisiblesecuritycyberbuckchat)\n"
+pm_caption += f"┣Řepô    ~ [Rєρο](https://github.com/INVISIBLE-CYBER-BUCK/CYBERBUCKUSERBOT)\n"
 pm_caption += f"**╰────────────**\n"
 
 
