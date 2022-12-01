@@ -12,12 +12,12 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "α • 2.1"
 __license__ = "GNU Affero General Public License v3.0"
-__author__ = "Cyberbot <https://github.com/ITS-Cyberbot/Cyberbot>"
+__author__ = "Cyberbot <https://github.com/INVISIBLE-CYBER-BUCK/CYBERBUCKUSERBOT>"
 __copyright__ = f"Cyberbot Copyright (C) 2020 - 2021  { __author__}"
 
 legend.version = __version__
 legend.tgbot.version = __version__
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("CyberUserBot")
 bot = legend
 
 
@@ -35,9 +35,9 @@ signal.signal(signal.SIGTERM, close_connection)
 
 
 if Config.UPSTREAM_REPO == "pro":
-    UPSTREAM_REPO_URL = "https://github.com/ITS-Cyberbot/Cyberbot"
+    UPSTREAM_REPO_URL = "https://github.com/INVISIBLE-CYBER-BUCK/CYBERBUCKBOT"
 elif Config.UPSTREAM_REPO == "multi":
-    UPSTREAM_REPO_URL = "https://github.com/ITS-Cyberbot/LEGENDUSERBOT"
+    UPSTREAM_REPO_URL = "https://github.com/INVISIBLE-CYBER-BUCK/CYBERBUCKUSERBOT"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
