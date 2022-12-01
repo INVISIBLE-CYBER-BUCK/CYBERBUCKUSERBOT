@@ -17,7 +17,7 @@ from .utils import (
     verifyLoggerGroup,
 )
 
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("CyberdUserBot")
 
 print(Cyberbot.__copyright__)
 print("Licensed under the terms of the " + Cyberbot.__license__)
@@ -50,8 +50,8 @@ async def startup_process():
         print("----------------")
         print("Starting Bot Mode!")
         print("⚜ Cyberbot Has Been Deployed Successfully ⚜")
-        print("OWNER - @LegendBoy_XD")
-        print("Group - @Cyberbot_XD")
+        print("OWNER - @M_r_invisible_official")
+        print("Group - @invisiblesecuritycyberbuckchat")
         print("----------------")
         await verifyLoggerGroup()
         await add_bot_to_logger_group(BOTLOG_CHATID)
