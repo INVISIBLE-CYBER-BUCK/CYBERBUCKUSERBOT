@@ -1,15 +1,15 @@
-FROM LEGEND-AI/LEGENDBOT:slim-buster
+FROM INVISIBLE-CYBER-BUCK/CYBERBUCKBOT:slim-buster
 
 #clonning repo 
 
-RUN git clone https://github.com/LEGEND-AI/LEGENDUSERBOT.git /root/Legendbot
+RUN git clone https://github.com/INVISIBLE-CYBER-BUCK/CYBERBUCKUSERBOT.git /root/Cyberbot
 
 #working directory 
-WORKDIR /root/Legendbot
+WORKDIR /root/Cyberbot
 
 # Install requirements
 RUN pip3 install -U -r requirements.txt
 
-ENV PATH="/home/Legendbot/bin:$PATH"
+ENV PATH="/home/Cyberbot/bin:$PATH"
 
-CMD ["python3","-m","Legendbot"]
+CMD ["python3","-m","Cyberbot"]
