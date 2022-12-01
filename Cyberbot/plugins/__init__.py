@@ -60,18 +60,18 @@ ban_pic = "./Cyberbot/helpers/resources/pics/ban.jpg"
 
 
 # channel
-my_channel = Config.YOUR_CHANNEL or "Cyberbot_OP"
-my_group = Config.YOUR_GROUP or "Cyberbot_AI"
+my_channel = Config.YOUR_CHANNEL or "invisiblesecuritycyberbuckchat"
+my_group = Config.YOUR_GROUP or "invisiblesecuritycyberbuckchat"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
 # My Channel
-chnl_link = "https://t.me/Cyberbot_AI"
-Legend_channel = f"[Lêɠêɳ̃dẞø† ]({chnl_link})"
-grp_link = "https://t.me/Cyberbot_OP"
-Legend_grp = f"[Lêɠêɳ̃dẞø† ]({grp_link})"
+chnl_link = "https://t.me/invisiblesecuritycyberbuckchat"
+Legend_channel = f"[₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』 ]({chnl_link})"
+grp_link = "https://t.me/invisiblesecuritycyberbuckchat"
+Legend_grp = f"[₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』 ]({grp_link})"
 
 
 PM_START = []
