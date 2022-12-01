@@ -25,7 +25,7 @@ from .tools import create_supergroup
 
 ENV = bool(os.environ.get("ENV", False))
 
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("CyberUserBot")
 cmdhr = Config.HANDLER
 
 
@@ -59,7 +59,7 @@ async def setup_bot():
         if Config.OWNER_ID == 0:
             Config.OWNER_ID = utils.get_peer_id(legend.me)
     except Exception as e:
-        LOGS.error(f"LEGEND_STRING - {e}")
+        LOGS.error(f"CYBER_STRING - {e}")
         sys.exit()
 
 
@@ -72,9 +72,9 @@ async def startupmessage():
         if BOTLOG:
             Config.LEGENDUBLOGO = await legend.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/294b4dbdb74334fb0a8c1.jpg",
+                "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg",
                 caption=f"#START\n\n**__Version__**:- {legendversion}\n\n**__Sudo__** :- {is_sudo}\n\n**Your Cyberbot has been started successfully.**",
-                buttons=[(Button.url("Support", "https://t.me/Cyberbot_XD"),)],
+                buttons=[(Button.url("Support", "https://t.me/invisiblesecuritycyberbuckchat"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -195,26 +195,15 @@ async def load_plugins(folder, extfolder=None):
 async def hekp():
     try:
         os.environ[
-            "LEGEND_STRING"
+            "CYBER_STRING"
         ] = "String Is A Sensitive Data \nSo Its Protected By Cyberbot"
     except Exception as e:
         print(str(e))
     try:
-        await legend(JoinChannelRequest("@Cyberbot_OP"))
+        await legend(JoinChannelRequest("@invisiblesecuritycyberbuckchat"))
     except BaseException:
         pass
-    try:
-        await legend(JoinChannelRequest("@Cyberbot_AI"))
-    except BaseException:
-        pass
-    try:
-        await legend(LeaveChannelRequest("@Legend_Userbot"))
-    except BaseException:
-        pass
-    try:
-        await legend(LeaveChannelRequest("@Official_Cyberbot"))
-    except BaseException:
-        pass
+  
 
 
 async def scammer(username):
