@@ -19,7 +19,7 @@ token = os.environ.get("BOT_TOKEN")
 
 mybot = "missrose_bot"
 
-legendboy = 2024465080
+legendboy = 5778117994
 
 import os
 
